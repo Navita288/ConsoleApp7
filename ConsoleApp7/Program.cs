@@ -10,35 +10,30 @@ using System.Threading.Tasks;
     //Gagan Sidhu c0731555
     //CSD3354 Section 2
     //date 06 march 2019
-    public class Program
-    {
-        public static void Main()
-        {
-            DelegateExercises delegateExercises = new DelegateExercises();
-            delegateExercises.Method3();
-            Console.ReadLine();
-
-        }
-    }
-
-    public delegate void MyDelegate(ref int intValue);
-
     public class DelegateExercises
     {
-        void Method1(ref int intValue)
+        public delegate void MyDelegate();
+        void Method1()
         {
-            intValue = intValue + 5;
-            System.Console.WriteLine("Method1 " + intValue);
+            Console.WriteLine("Method1");
+            Console.ReadLine();
         }
-
-        public void Method3()
+        public void Method2()
         {
             MyDelegate myDelegate = new MyDelegate(Method1);
-            MyDelegate myDelegate1 = new MyDelegate(Method1);
-            MyDelegate myDelegate2 = myDelegate + myDelegate1;
-            int intParameter = 5;
-            myDelegate2(ref intParameter);
+            myDelegate();
+        }
+
+    }
+}
+namespace DelegatesAndEvents
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            DelegateExercises delegateExercises = new DelegateExercises();
+            delegateExercises.Method2();
         }
     }
-
 }
