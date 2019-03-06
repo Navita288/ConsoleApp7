@@ -9,37 +9,14 @@ using System.Threading.Tasks;
     // Navita Navita c0730283
     //Gagan Sidhu c0731555
     //CSD3354 Section 2
-    
-
-    public class Program
-    {
-        public static void Main()
-        {
-            DelegateExercises delegateExercises = new DelegateExercises();
-            delegateExercises.Method3();
-            Console.ReadLine();
-        }
-    }
-
+    //date 06 march 2019
     public delegate void MyDelegate();
 
     public class DelegateExercises
     {
-        void Method1()
+        void Method3()
         {
-            System.Console.WriteLine("Method1");
-
-            
-        }
-
-        public void Method3()
-        {
-            MyDelegate myDelegate = new MyDelegate(Method1);
-            myDelegate();
-            System.Console.WriteLine(myDelegate.ToString());
-            
+            System.Console.WriteLine(MyDelegate.ToString());
         }
     }
-
-
-}
+    
