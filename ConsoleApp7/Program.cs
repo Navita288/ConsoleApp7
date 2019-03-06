@@ -46,7 +46,7 @@ using System.Threading.Tasks;
             MyDelegate myDelegate = new MyDelegate(Method1);
             Method4(myDelegate);
             myDelegate = new MyDelegate(Method2);
-            Method4(myDelegate);
+            Method4(myDelegate);()
         }
     }
 }
