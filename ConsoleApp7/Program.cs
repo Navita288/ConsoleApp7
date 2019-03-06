@@ -9,7 +9,7 @@ using System.Threading.Tasks;
     // Navita Navita c0730283
     //Gagan Sidhu c0731555
     //CSD3354 Section 2
-    //March 6,2019
+    
 
     public class Program
     {
@@ -29,7 +29,7 @@ using System.Threading.Tasks;
         {
             System.Console.WriteLine("Method1");
 
-
+            
         }
 
         public void Method3()
@@ -37,6 +37,7 @@ using System.Threading.Tasks;
             MyDelegate myDelegate = new MyDelegate(Method1);
             myDelegate();
             System.Console.WriteLine(myDelegate.ToString());
+            
         }
     }
 
